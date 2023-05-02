@@ -1,2 +1,2 @@
 # work.io
- Landing Page
+ Landing page
