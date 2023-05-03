@@ -55,43 +55,6 @@ const slidePositioning = (slide, index) => {
 slides.forEach(slidePositioning);
 
 
-// when i click left, move slides to the left.
-
-// next.addEventListener('click', e =>{
-//     const currentSlide = track.querySelector('.current-slide');
-//     const nextSlide = currentSlide.nextElementSibling;
-    
-//     // move the slide
-
-//     // to move to the next slide, knowing the amount to move
-
-//     const amountToMove = nextSlide.style.left;
-
-//     track.style.transform = 'translateX(-' + amountToMove +')';
-
-//     // initially looking for current slide,
-//     // to shift current slide to next sibling
-
-//     currentSlide.classList.remove('current-slide');
-//     nextSlide.classList.add('current-slide');
-
-
-// } )
-
-
-// when i click right, move slides to the right.
-
-// prev.addEventListener('click', e => {
-//     const currentSlide = track.querySelector('.current-slide');
-//     const prevSlide = currentSlide.previousElementSibling;
-
-    // const amountToMove = prevSlide.style.left;
-
-//     track.style.transform = 'translateX(' + amountToMove +')';
-
-//     currentSlide.classList.remove('current-slide');
-//     prevSlide.classList.add('current-slide');
-// })
 
 
 const moveToSlide = (track, currentSlide, targetSlide)=>{
@@ -122,6 +85,7 @@ prev.addEventListener('click', e=>{
 
 
 // MOBILE CAROUSAL
+
 const caros = document.querySelector('.mobile-carousal');
 const contents = Array.from(caros.children);
 
