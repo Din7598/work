@@ -1250,12 +1250,30 @@ input:checked +label::after{
 
     .about-me{
         width: 10%;
+        grid-area: he;
         border-bottom: 2px solid var(--square);
-        padding-bottom: .5em ; 
+        /* padding-bottom: .5em ;  */
     }
 
     .about{
-        width: 50%;
+        /* width: 50%; */
+        display: grid;
+        grid-template-rows: auto auto;
+
+        grid-template-areas: '. he'
+        'pic quo';
+        grid-template-columns: auto auto;
+        column-gap: 5em;
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+    .pictures{
+        grid-area: pic;
+    }
+
+    .ml{
+        grid-area: quo;
     }
 
     .enclosure{
