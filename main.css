@@ -496,7 +496,7 @@ header{
     justify-content: start;
     line-height: 1.5em;
     width: 10%;
-    padding-bottom: .5em;
+    /* padding-bottom: .5em; */
     border-bottom: 5px solid var(--square);
 }
 
@@ -635,9 +635,10 @@ input:checked +label::after{
 .price-select{
     display: flex;
     flex-flow: column nowrap;
-    gap: 10em;
-    padding: 3em;
+    gap: 5em;
+    padding: 0 10em;
 }
+
 
 .prices,.pay{
     background-color: var(--bg-color);
@@ -704,13 +705,13 @@ input:checked +label::after{
     background-position: center;
     background-size: contain;
     position: relative;
-    height: 20em;
-    width: 100%;
+    height: 20em;    
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -721,17 +722,18 @@ input:checked +label::after{
 .container-carousal{
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 80%;
     /* background-color: #e6402b; */
     overflow: hidden;
 }
+
 
 .mobile-carousal{
     list-style: none;
     padding: 0;
     margin: 0;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     transition: transform .5s ease-in-out;
 }
@@ -901,7 +903,7 @@ input:checked +label::after{
 
 
 
-@media screen and (min-width:821px){
+@media screen and (min-width:820px){
     
     .mobile-screen{
         display: none;
@@ -927,9 +929,10 @@ input:checked +label::after{
         display: flex;
         flex-flow: row nowrap;
         list-style: none;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 2em;
+        text-align: center;
     }
 
     .list-links{
@@ -955,7 +958,7 @@ input:checked +label::after{
 
     .follow-up{
         background-color: var(--button);
-        padding: 1em 1.2em;
+        padding: .5em 1em;
         color: var(--passion-color2);
         border: none;
         font-size: var(--mid-font);
@@ -1115,7 +1118,7 @@ input:checked +label::after{
     .main-header{
         text-align: center;
         font-size: 1.5em;
-        width: 40%;
+        max-width: 40%;
     }
     .aesthetic{
         color: var(--passion-color);
@@ -1156,12 +1159,12 @@ input:checked +label::after{
 
     .vr-tool,.vr-tool2,.vr-tool3{
 
-        padding: 2em;
+        /* padding: 2em; */
     }
 
     .vr-tool3{
-        width: 110px;
-        height: 93px;
+        /* width: 110px; */
+        /* height: 93px; */
     }
 
 
@@ -1212,7 +1215,7 @@ input:checked +label::after{
 
     .square{
         position: absolute;
-        top: -1em;
+        top: 1.5em;
         left: -1.2em;
         width: 50px;
         height: 50px;
@@ -1222,7 +1225,8 @@ input:checked +label::after{
     }
 
     .snapshot{
-        width: 60%;
+        width: 100%;
+        height: 100%;
         z-index: 1;
     }
 
@@ -1230,8 +1234,8 @@ input:checked +label::after{
 
     .dotted-square{
         position: absolute;
-        top: 14em;
-        right: 11.5em;
+        bottom: 0;
+        right: -1.5em;
         display: grid;
         grid-template-columns: repeat(6,.2fr);
         /* grid-template-rows: repeat(); */
@@ -1239,7 +1243,7 @@ input:checked +label::after{
         /* height: 6%; */
         gap: .2em;
     }
-    .dot{
+    .dot,.dot24{
         border-radius: 50%;
         background-color: var(--square2);
         width: 2px;
@@ -1247,12 +1251,15 @@ input:checked +label::after{
         z-index: 2;
 
     }
+    .dot24{
+        background-color: var(--square);
+    }
 
     .about-me{
         width: 10%;
         grid-area: he;
-        border-bottom: 2px solid var(--square);
-        /* padding-bottom: .5em ;  */
+        /* border-bottom: 2px solid var(--square); */
+        padding-bottom: .1em ; 
     }
 
     .about{
@@ -1260,7 +1267,7 @@ input:checked +label::after{
         display: grid;
         grid-template-rows: auto auto;
 
-        grid-template-areas: '. he'
+        grid-template-areas: 'pic he'
         'pic quo';
         grid-template-columns: auto auto;
         column-gap: 5em;
@@ -1288,6 +1295,7 @@ input:checked +label::after{
         gap: 10em;
         margin-top: 5em;
         margin-bottom: 5em;
+        position: relative;
 
     }
 
@@ -1295,13 +1303,14 @@ input:checked +label::after{
         width: 50%;
     }
 
+
     .square2{
         position: absolute;
-        top: -1em;
-        left: 5em;
+        top: -1.6em;
+        left: -1.2em;
         width: 50px;
         height: 50px;
-        background-color: var(--square);
+        background-color: var(--square2);
         border-radius: .3em;
         z-index: -1;
     }
@@ -1314,8 +1323,8 @@ input:checked +label::after{
 
     .dotted-square2{
         position: absolute;
-        top: 13.5em;
-        right: 4.5em;
+        bottom: 0;
+        right: -1.5em;
         display: grid;
         grid-template-columns: repeat(6,.2fr);
         /* grid-template-rows: repeat(); */
@@ -1323,6 +1332,9 @@ input:checked +label::after{
         /* height: 6%; */
         gap: .2em;
     }
+
+
+
     .pricing-plan{
         background-color: var(--contain);
 
@@ -1356,8 +1368,14 @@ input:checked +label::after{
         align-items: center;
         justify-content: center;
     }
+    .price-select{
+        display: flex;
+        flex-flow: row nowrap;
+    }
 
     /* toggle slider checkbox */
+
+
     input[type=checkbox]{
         width: 12em;
         height: 2em;
@@ -1523,7 +1541,7 @@ input:checked +label::after{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
-        width: 25%;
+        width: 30%;
     }
 
     .clients img{
@@ -1536,7 +1554,7 @@ input:checked +label::after{
         /* main carousal container */
 
         position: relative;
-        height: 350px;
+        height: 20em;
         margin: 0 auto;
 
         width: 50%;
@@ -1546,12 +1564,12 @@ input:checked +label::after{
         /* buttons general */
         z-index: 1;
         position: absolute;
-        top: 50%;
-        left: 80%;
+        top: 60%;
+        right: 0;
         transform: translateY(-50%);
         display: flex;
         justify-content: space-evenly;
-        width: 20%;
+        width: 10em;
         cursor: pointer;
 
     }
@@ -1571,6 +1589,7 @@ input:checked +label::after{
         position: relative;
         height: 100%;
         overflow: hidden;
+        /* width: 80%; */
 
     }
 
@@ -1581,7 +1600,7 @@ input:checked +label::after{
         padding: 0;
         margin: 0;
         height: 100%;
-        transition: transform .4s ease-in-out;
+        transition: transform .3s ease-in-out;
 
     }
 
@@ -1594,6 +1613,7 @@ input:checked +label::after{
         /* padding: 1em; */
 
     }
+
 
 
     .title{
@@ -1616,14 +1636,6 @@ input:checked +label::after{
 
 
     /* CAROUSEL MAIN STYLING */
-
-    
-    
-    
-    
-    
-    
-    
     
     
     /* FOOTER */
@@ -1640,11 +1652,12 @@ input:checked +label::after{
     }
 
     .logo-foot{
-        width: 20%;
+        width: 5em;
     }
+
     .logo-foot img{
-        background-color: var(--contain);
-        width: 40%;
+        /* background-color: var(--contain); */
+        width: 100%;
     }
 
     .links{
@@ -1690,6 +1703,7 @@ input:checked +label::after{
 
     .butt{
         grid-area: button ;
+        width: 100%;
     }
     .input{
         grid-area: input;
@@ -1708,33 +1722,4 @@ input:checked +label::after{
 
 
 
-}
-
-/* animation */
-
-@keyframes slideout {
-    from{
-        transform: translateX(0);
-        transition: transform .4s ease;
-    }
-
-    to{
-        transform: translateX(100%);
-        transition: transform .4s ease;
-    }
-
-    
-}
-
-@keyframes slidein {
-    from{
-        transform: translateX(100%);
-        transition: transform .4s ease-in;
-    }
-    to{
-        transform: translateX(0);
-        transition: transform .4s ease-in;
-    }
-
-    
 }

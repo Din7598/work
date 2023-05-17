@@ -49,7 +49,7 @@ const slideSize = slides[0].getBoundingClientRect().width;
 
 
 const slidePositioning = (slide, index) => {
-    slide.style.left = slideSize * index + 'px';   
+    slide.style.left = slideSize * index + 'em';   
 }
 
 slides.forEach(slidePositioning);
@@ -61,6 +61,7 @@ const moveToSlide = (track, currentSlide, targetSlide)=>{
     track.style.transform = 'translateX(-'+ targetSlide.style.left +')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
+
 }
 
 next.addEventListener('click', e=>{
@@ -105,6 +106,14 @@ const moveslides = (caro, currentContent, targetContent) =>{
     caro.style.transform = 'translateX(-'+ targetContent.style.left +')';
     currentContent.classList.remove('current-content');
     targetContent.classList.add('current-content');
+
+    if (contents.style.display==='none') {
+        contents.style.display = 'block';
+
+    } else {
+        contents.style.display = 'none';
+        
+    }
 
 }
 
